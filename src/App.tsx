@@ -3,7 +3,7 @@ import './App.css'
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100 py-12">
+    <div className="bg-gray-100 py-12">
       <StringCalculator />
     </div>
   );

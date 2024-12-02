@@ -54,7 +54,7 @@ export const StringCalculator = () => {
         </div>
       )}
 
-      <div className="mt-6 text-sm text-gray-600">
+      <div className="mt-6 text-sm text-gray-600 text-left ">
         <h2 className="font-semibold mb-2">Instructions:</h2>
         <ul className="list-disc pl-5 space-y-1">
           <li>Enter numbers separated by commas (e.g., "1,2,3")</li>

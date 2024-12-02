@@ -41,4 +41,16 @@ describe('String Calculator', () => {
   it('should throw an error listing all negative numbers', () => {
     expect(() => add('1,-2,3,-4,5,-6')).toThrow('negative numbers not allowed: -2,-4,-6');
   });
+
+  it('should handle multiple consecutive new lines', () => {
+    expect(add('1\n\n2,3')).toBe(6);
+  });
+
+  it('should handle whitespace around numbers', () => {
+    expect(add('1\n 2 , 3')).toBe(6);
+  });
+
+  it('should handle mixed delimiters with whitespace', () => {
+    expect(add('1, \n2\n, 3')).toBe(6);
+  });
 });
