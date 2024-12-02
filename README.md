@@ -2,6 +2,12 @@
 
 A modern, responsive string calculator built with React, TypeScript, and Tailwind CSS. This application allows users to perform calculations on strings of numbers with various delimiters.
 
+## 🌐 Live Demo
+
+Check out the live application: [String Calculator](https://string-calculator-app.vercel.app/)
+
+The application is hosted on [Vercel](https://vercel.com/), providing fast and reliable access to the calculator.
+
 ## 🚀 Features
 
 - Add numbers from string input
