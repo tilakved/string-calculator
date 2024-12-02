@@ -12,16 +12,19 @@ export function add(numbers: string): number {
   }
 
   // Extract numbers using regex
-  const regExp = new RegExp(/(-?\d)+/, 'g');
+  const regExp = new RegExp(/-?(\d)+/, 'g');
   const numberArray = numbersToProcess.match(regExp)?.map(Number) || [];
 
   // Check for negative numbers
   const negativeNumbers = numberArray.filter((num) => num < 0);
   if (negativeNumbers.length > 0) {
     throw new Error(
-      `negative numbers not allowed: ${negativeNumbers.join(",")}`
+      `Negative numbers not allowed: ${negativeNumbers.join(', ')}`
     );
   }
 
-  return numberArray.reduce((sum, num) => sum + num, 0);
+  // Replace numbers greater than 1000 with 0
+  const validNumbers = numberArray.map(num => num > 1000 ? 0 : num);
+
+  return validNumbers.reduce((sum, num) => sum + num, 0);
 }
