@@ -23,6 +23,5 @@ export function add(numbers: string): number {
     );
   }
 
-  console.log(numberArray);
   return numberArray.reduce((sum, num) => sum + num, 0);
 }
